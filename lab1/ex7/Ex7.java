@@ -1,14 +1,15 @@
-package ru.mirea.lab1.ex7;
-
+package lab;
+import java.math.BigInteger;
 import java.util.Scanner;
 
 public class Ex7 {
 
-    public static int fact(int a){
-        int u = 1;
+    public static BigInteger fact(int a){
+
+        BigInteger f = BigInteger.ONE;
         for (int i = 1; i <= a; i++)
-            u *= i;
-        return u;
+            f = f.multiply(BigInteger.valueOf(i));
+        return f;
     }
     public static void main(String[] args) {
         System.out.println("Введите число:");
