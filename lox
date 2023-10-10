@@ -1,0 +1,35 @@
+package ru.mirea.lab3.ex1;
+import java.util.Scanner;
+public class Ex4 {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        int n = input.nextInt();
+        int[] arr = new int[n];
+        int k=0;
+        for (int i = 0; i < n; i++)
+            arr[i] = (int) (Math.random() * n);
+
+        for (int el : arr)
+            System.out.print(el + " ");
+        System.out.println();
+
+       for(int i = 0; i < n; i++) {
+           if (arr[i] % 2 == 0) {
+               k++;
+           }
+       }
+        int[] arr2 = new int[k];
+        int j=0;
+           for (int i = 0; i < n; i++) {
+
+               if (arr[i] % 2 == 0) {
+                           arr2[j] = arr[i];
+                   j++;
+               }
+
+           }
+
+        for (int el : arr2)
+        System.out.print(el + " ");
+    }
+
